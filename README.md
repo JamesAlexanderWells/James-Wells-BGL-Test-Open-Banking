@@ -18,6 +18,7 @@ This was done and tested with:
 - Run "npm install -g ts-node" IF you run into any ts-node related issues
 - Download Postman
 - Import the Postman collection "JW-Transaction-Match-Tests.postman_collection.json" found under API\Postman-tests
+- Under API/config/default.json use the db details you wish to connect with to your local MySQL instance
 
 
 ## How to test / use
