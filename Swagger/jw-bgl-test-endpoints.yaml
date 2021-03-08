@@ -5,7 +5,7 @@ info:
   title: "James Wells BGL Test API"
   contact:
     email: "james@wellsmail.me"
-host: "localhost:8080"
+host: "http://localhost:8080"
 basePath: "/jw-api-bgl-test"
 schemes:
   - "http"
