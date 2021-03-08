@@ -1,6 +1,8 @@
 # James Wells BGL Test
 
-James Wells' submission to BGL for the transaction matching exercise. This was done and tested with:
+James Wells' submission to BGL for the transaction matching exercise. The solution is an api that clients can connect to and send a post request that they can use to match transaction descriptions with merchant names
+
+This was done and tested with:
 
 -MySQL
 -Node / Jest
