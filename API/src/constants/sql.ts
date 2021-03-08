@@ -1,0 +1,2 @@
+export const getTransactions : string = 'SELECT merchant_name FROM transaction_information where transaction_description = ?';
+export const addUnknownTransaction : string = 'INSERT INTO transaction_information (`transaction_description`, `merchant_name`) VALUES (?, \'unknown\')';

@@ -1,0 +1,69 @@
+swagger: "2.0"
+info:
+  description: "This is the documentation for how to use the api provided as part of the code test for the BGL group"
+  version: "1.0.0"
+  title: "James Wells BGL Test API"
+  contact:
+    email: "james@wellsmail.me"
+host: "localhost:8080"
+basePath: "/jw-api-bgl-test"
+schemes:
+  - "http"
+paths:
+  /Transactions/match:
+    post:
+      tags:
+        - "Transactions"
+      summary: "match a transaction transaction"
+      description: "The given process is created and (optionally) executed"
+      operationId: "addProcess"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "processEntity"
+          description: "The process that needs to be added"
+          required: true
+          schema:
+            $ref: "#/definitions/TransactionMatchRequest"
+      responses:
+        "200":
+          description: "The transaction was matched"
+          schema:
+            $ref: "#/definitions/TransactionMatchResponse"
+        "201":
+          description: "Unknown transaction was added to the DB"
+          schema:
+            $ref: "#/definitions/TransactionMatchResponse"
+        "500":
+          description: "Internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+definitions:
+  TransactionMatchRequest:
+    type: "object"
+    properties:
+      transactionDescription:
+        type: "string"
+  TransactionMatchResponse:
+    type: "object"
+    properties:
+      transactionDescription:
+        type: "string"
+      merchantName:
+        type: "string"
+      created:
+        type: "boolean"
+  ErrorResponse:
+    type: "object"
+    properties:
+      error:
+        type: "string"
+      errors:
+        type: "object"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://Swagger.io"

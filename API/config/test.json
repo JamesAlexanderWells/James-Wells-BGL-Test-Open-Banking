@@ -1,0 +1,13 @@
+{
+    "server": {
+        "port": 8080,
+        "baseAddress": "/jw-api-bgl-test"
+    },
+
+    "database": {
+        "host": "localhost",
+        "user": "root",
+        "password": "password",
+        "database": "test_db"
+    }
+}
