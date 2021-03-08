@@ -20,6 +20,7 @@
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.merchantName).to.eql(\"DVLA\");\r",
 							"    pm.expect(jsonData.transactionDescription).to.eql(\"dvla vehicle tax\");\r",
+							"    pm.expect(jsonData.created).to.eql(false);\r",
 							"});\r",
 							"\r",
 							""
@@ -63,13 +64,15 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Response should have status of 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"pm.test(\"Response should have status of 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Request should return an unknown merchant name and transaction description\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.merchantName).to.eql(\"Unknown Merchant Name\");\r",
+							"    pm.expect(jsonData.created).to.eql(true);\r",
+							"    pm.expect(jsonData.transactionDescription).to.exist;\r",
 							"});\r",
 							"\r",
 							""
