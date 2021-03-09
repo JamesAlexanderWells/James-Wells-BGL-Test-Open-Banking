@@ -12,7 +12,7 @@ This was done and tested with:
 
 - The person reviewing this has a understanding of how a webservice / API and DB work
 - The data being sent to this solution is in the only avalible structure (only transaction description)
-- The person needs no asistance setting up the 3rd part tools specified in the set up guide
+- The person setting this solution up needs no asistance setting up the 3rd part tools specified in the set up guide
 - The client understands how to connect with and handle REST requests.
 
 
