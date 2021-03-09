@@ -1,6 +1,9 @@
 # James Wells BGL Test
 
-James Wells' submission to BGL for the transaction matching exercise. This was done and tested with:
+James Wells' submission to BGL for the transaction matching exercise. The solution is an api that clients can connect to and send a post request that they can use to match transaction descriptions with merchant names
+
+This was done and tested with:
+
 -MySQL
 -Node / Jest
 -Postman
@@ -15,6 +18,7 @@ James Wells' submission to BGL for the transaction matching exercise. This was d
 - Run "npm install -g ts-node" IF you run into any ts-node related issues
 - Download Postman
 - Import the Postman collection "JW-Transaction-Match-Tests.postman_collection.json" found under API\Postman-tests
+- Under API/config/default.json use the db details you wish to connect with to your local MySQL instance
 
 
 ## How to test / use
