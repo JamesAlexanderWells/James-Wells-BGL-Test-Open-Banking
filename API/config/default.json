@@ -9,11 +9,5 @@
         "user": "root",
         "password": "password",
         "database": "test_db"
-    },
-
-    "cache": {
-        "defaultTTL": 100,
-        "defaultPeriodCheck": 120
-    },
-    "apiDocsPath": "/api-docs"
+    }
 }
